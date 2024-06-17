@@ -1,4 +1,4 @@
-# Gitfolio Tracker - [Live Demo](https://gitfolio-tracker.onrender.com/) 
+# Gitfolio Tracker 🚀 - [Live Demo](https://gitfolio-tracker.onrender.com/) 
 
 Gitfolio Tracker is a full stack MERN (MongoDB, Express.js, React.js, Node.js) application designed to help users explore, authenticate, and manage GitHub profiles and repositories effortlessly.
 
