@@ -17,14 +17,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
-console.log("dirname", __dirname);
+app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false }));
 
-app.use(session({ secret: "keyboard cat", resave: false, saveUninitialized: false }));
-// Initialize Passport!  Also use passport.session() middleware, to support
-// persistent login sessions (recommended).
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors());
+app.use(cors({origin: "https://localhost:3000", methods: "GET,POST"}));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
